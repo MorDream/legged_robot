@@ -183,7 +183,7 @@ class Go2RoughCfg( LeggedRobotCfg ):
             stumble = -0.05
             stand_still = -1.0
             action_rate = -0.01
-            action_smoothness = -0.0001
+            action_smoothness = -0.01
             
             feet_contact_forces = -0.00015
             foot_clearance = -0.5
@@ -206,7 +206,7 @@ class Go2RoughCfg( LeggedRobotCfg ):
         clip_actions_method = None # let the policy learns not to exceed the limits
 
     class noise( LeggedRobotCfg.noise ):
-        add_noise = True
+        add_noise = False
 
     class viewer( LeggedRobotCfg.viewer ):
         pos = [-1., -1., 0.4]
@@ -280,7 +280,7 @@ class Go2RoughCfgPPO( LeggedRobotCfgPPO ):
         experiment_name = "rough_go2"
         
         resume = True
-        load_run = "/root/mym/parkour-main/legged_gym/logs/rough_go2/Feb25_01-43-03_Go2Rough_pEnergy-2e-05_pDofErr-1e-02_pDofErrN-1e+00_pStand-2e+00_fromFeb02_06-12-17"
+        load_run = "/root/mym/parkour-main/legged_gym/logs/rough_go2/Mar10_06-05-35_Go2Rough"
 
         run_name = "".join(["Go2Rough"])
 
